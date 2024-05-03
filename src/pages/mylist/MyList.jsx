@@ -1,14 +1,15 @@
-import "./home.scss";
+import "./mylist.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Widget from "../../components/widget/Widget";
 import Chart from "../../components/chart/Chart";
+import MyDatatable from "../../components/mydatatable/MyDatatable";
 
-const Home = () => {
+const MyList = () => {
   return (
-    <div className="home">
+    <div className="mylist">
       <Sidebar />
-      <div className="homeContainer">
+      <div className="mylistContainer">
         <Navbar />
         <div className="widgets">
           <Widget type="user"></Widget>
@@ -16,13 +17,10 @@ const Home = () => {
           <Widget type="earning"></Widget>
           <Widget type="balance"></Widget>
         </div>
-        <div className="charts">
-          <Chart type="order" aspect={2 / 1} />
-          <Chart type="earning" aspect={2 / 1} />
-        </div>
+        <MyDatatable title="All Data" />
       </div>
     </div>
   );
 };
 
-export default Home;
+export default MyList;
